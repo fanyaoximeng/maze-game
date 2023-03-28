@@ -1,0 +1,97 @@
+# Project: ≤‚ ‘
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o InitMaze.o menu_main.o CreatMaze.o print.o CreatInAndOut.o modeset.o print_main.o color.o gotoxy.o HideCursor.o print_player.o print_space.o game_skill_p.o print_time.o CreatList.o CreatNode.o Storage_Del_List.o PrintList.o print_bushou.o print_hunter.o print_wall.o FindList.o LengthList.o
+LINKOBJ  = main.o InitMaze.o menu_main.o CreatMaze.o print.o CreatInAndOut.o modeset.o print_main.o color.o gotoxy.o HideCursor.o print_player.o print_space.o game_skill_p.o print_time.o CreatList.o CreatNode.o Storage_Del_List.o PrintList.o print_bushou.o print_hunter.o print_wall.o FindList.o LengthList.o
+LIBS     = -L"D:/linux/devc/Dev-Cpp/MinGW64/lib" -L"D:/linux/devc/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"D:/linux/devc/Dev-Cpp/MinGW64/include" -I"D:/linux/devc/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/linux/devc/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/linux/devc/Dev-Cpp/MinGW64/include" -I"D:/linux/devc/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/linux/devc/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/linux/devc/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = ≤‚ ‘.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+InitMaze.o: InitMaze.c
+	$(CC) -c InitMaze.c -o InitMaze.o $(CFLAGS)
+
+menu_main.o: menu_main.c
+	$(CC) -c menu_main.c -o menu_main.o $(CFLAGS)
+
+CreatMaze.o: CreatMaze.c
+	$(CC) -c CreatMaze.c -o CreatMaze.o $(CFLAGS)
+
+print.o: print.c
+	$(CC) -c print.c -o print.o $(CFLAGS)
+
+CreatInAndOut.o: CreatInAndOut.c
+	$(CC) -c CreatInAndOut.c -o CreatInAndOut.o $(CFLAGS)
+
+modeset.o: modeset.c
+	$(CC) -c modeset.c -o modeset.o $(CFLAGS)
+
+print_main.o: print_main.c
+	$(CC) -c print_main.c -o print_main.o $(CFLAGS)
+
+color.o: color.c
+	$(CC) -c color.c -o color.o $(CFLAGS)
+
+gotoxy.o: gotoxy.c
+	$(CC) -c gotoxy.c -o gotoxy.o $(CFLAGS)
+
+HideCursor.o: HideCursor.c
+	$(CC) -c HideCursor.c -o HideCursor.o $(CFLAGS)
+
+print_player.o: print_player.c
+	$(CC) -c print_player.c -o print_player.o $(CFLAGS)
+
+print_space.o: print_space.c
+	$(CC) -c print_space.c -o print_space.o $(CFLAGS)
+
+game_skill_p.o: game_skill_p.c
+	$(CC) -c game_skill_p.c -o game_skill_p.o $(CFLAGS)
+
+print_time.o: print_time.c
+	$(CC) -c print_time.c -o print_time.o $(CFLAGS)
+
+CreatList.o: CreatList.c
+	$(CC) -c CreatList.c -o CreatList.o $(CFLAGS)
+
+CreatNode.o: CreatNode.c
+	$(CC) -c CreatNode.c -o CreatNode.o $(CFLAGS)
+
+Storage_Del_List.o: Storage_Del_List.c
+	$(CC) -c Storage_Del_List.c -o Storage_Del_List.o $(CFLAGS)
+
+PrintList.o: PrintList.c
+	$(CC) -c PrintList.c -o PrintList.o $(CFLAGS)
+
+print_bushou.o: print_bushou.c
+	$(CC) -c print_bushou.c -o print_bushou.o $(CFLAGS)
+
+print_hunter.o: print_hunter.c
+	$(CC) -c print_hunter.c -o print_hunter.o $(CFLAGS)
+
+print_wall.o: print_wall.c
+	$(CC) -c print_wall.c -o print_wall.o $(CFLAGS)
+
+FindList.o: FindList.c
+	$(CC) -c FindList.c -o FindList.o $(CFLAGS)
+
+LengthList.o: LengthList.c
+	$(CC) -c LengthList.c -o LengthList.o $(CFLAGS)
